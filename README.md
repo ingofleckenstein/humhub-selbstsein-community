@@ -4,7 +4,7 @@ Additional settings and features for the Selbstsein HumHub community.
 
 ## 0.1.0 — Space member visibility
 
-Space header controls → **Selbstsein Community** provides three audiences:
+Space settings → **Advanced** replaces the Core Hide Members checkbox with three audiences:
 
 * All authenticated users who can access the Space
 * Members of this Space
@@ -27,3 +27,7 @@ Copy into `protected/modules/selbstsein-community` and activate through the modu
 On disabling/removing the module, its event guards stop applying; Core hideMembers remains enabled and Core privileged-role access applies again. Existing policy values remain for reactivation. No membership records are changed.
 
 Run `php tests/policy.php` for the isolated policy checks.
+
+## 0.1.1 validation
+Verified on testcommunity.selbstsein.events with the installed HumHub runtime: module activation, 33 real identity/policy checks, registered controller event guards for list/search, sidebar rendering, removal of the separate menu, Advanced form rendering and actual save. Test Space and settings were rolled back. Tests ran through PHP with a web application context; visual browser acceptance and REST/third-party integration audit remain outstanding.
+
